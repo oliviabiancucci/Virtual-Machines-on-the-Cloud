@@ -1,0 +1,65 @@
+Olivia Biancucci
+1136788
+CIS 4010: Assignment 2
+February 16th, 2024
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+How to Run:
+
+After extracting the files and navigating to the directory where they are located, type
+"python3 automate.py" in your terminal. 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Requirements:
+
+- Developed with Python version 3.9.2
+
+- Run with Linux - specifically Debian 11.8
+
+- Azure and GCP cli login required before running
+
+- The 2 config files provided in this package: "azure.conf" and "gcp.conf" or your own
+configuration files with the same names and structures
+
+- For an Azure VM, the config must include "name", "resource-group", "image", 
+"location", and "admin-username" information
+
+- Azure VMs also can have the specification of an admin password with the parameter
+"admin-password" which must meet the password criteria outlined on the assignment
+description
+
+- For a GCP VM, the config must include "name", "image", "zone", "imageproject"
+information
+
+- If using the "port" parameter, please ensure that you do not have any firewall rules
+or set up in GCP with the name "open-port[insert a number from 1-10 here]." These must 
+be deleted before running the program. Run the command "gcloud compute firewall-rules 
+delete [insert firewall name here]" in your terminal to delete each one.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Additional VM Configurations for Azure:
+
+1. "os-disk-size-gb" can be included where you cna specify the OS disk size in GB to be
+created. Example: "os-disk-size-gb = 128"
+
+2. "os-disk-caching" can be included which is the storage caching type for the VM OS 
+disk. Options for this parameter are: "None", "ReadOnly", and "ReadWrite." Example:
+"os-disk-caching = ReadWrite"
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Assumptions:
+
+- Configuration files follow the ones provided in the assignment description/the ones
+in this package with each configuration parameter on a separate line
+
+- The "port" option in the config files must only contain 1 number on each line
+(multiple ports can be opened as long as they are each specified on their own line
+with "port = [insert port number here]")
+
+- Other assumptions follow the descriptions and examples of the assignment description
+and grading guide
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Thank you very much! :)
